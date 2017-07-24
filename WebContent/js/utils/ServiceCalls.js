@@ -15,12 +15,12 @@ var gridServiceCallCollection = [];
 var paginationObj = {};
 function initPagination()
 {
-	/*paginationObj = {
+	paginationObj = {
 		totalPages : ko.observable(0),
 		currentPageNo : ko.observable(0),
 		pageRowCount : ko.observable(10),
 		
-	}*/
+	}
 }
 
 initPagination();
@@ -31,12 +31,12 @@ function resetPagination()
 	paginationObj.totalPages(0);
 }
 
-/*paginationObj.pageNoToDisplay = ko.computed(function() 
+paginationObj.pageNoToDisplay = ko.computed(function() 
 { 
 	var currentPageNo = paginationObj.currentPageNo()+1;
 	return currentPageNo
 			
-});*/
+});
 
 /**
  * This is the area to make service calls 
@@ -171,7 +171,7 @@ var ServiceCalls = {
 				        	alert("Network Error. Please check internet connection");
 				        }
 						
-						clearInterval(interval);
+						//clearInterval(interval);
 						
 						interval = null;
 						

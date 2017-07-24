@@ -11,6 +11,7 @@
 <!-- Bootstrap 3.3.7 -->
 <link rel="stylesheet"
 	href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+
 <!-- Font Awesome -->
 <link rel="stylesheet"
 	href="../bower_components/font-awesome/css/font-awesome.min.css">
@@ -23,10 +24,16 @@
 <link rel="stylesheet"
 	href="../bower_components/fullcalendar/dist/fullcalendar.print.min.css"
 	media="print">
- <!-- Ionicons -->
-  <link rel="stylesheet" href="../../bower_components/Ionicons/css/ionicons.min.css">
-  <!-- DataTables -->
-  <link rel="stylesheet" href="../../bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
+<!-- Ionicons -->
+<link rel="stylesheet"
+	href="../../bower_components/Ionicons/css/ionicons.min.css">
+<!-- DataTables -->
+<link rel="stylesheet"
+	href="../../bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
+	
+<link rel="stylesheet"
+	href="../css/intellion.css">
+	
 <!-- Theme style -->
 <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
 <!-- AdminLTE Skins. Choose a skin from the css/skins
@@ -331,28 +338,8 @@
 						</ul></li>
 
 
-
-
-					<li class="treeview"><a href="#"> <i class="fa fa-table"></i>
-							<span>Tables</span> <span class="pull-right-container"> <i
-								class="fa fa-angle-left pull-right"></i>
-						</span>
-					</a>
-						<ul class="treeview-menu">
-							<li><a href="tables/simple.html"><i
-									class="fa fa-circle-o"></i> Simple tables</a></li>
-							<li><a href="tables/data.html"><i class="fa fa-circle-o"></i>
-									Data tables</a></li>
-						</ul></li>
-					<li class="active"><a href="calendar.html"> <i
-							class="fa fa-calendar"></i> <span>Calendar</span> <span
-							class="pull-right-container"> <small
-								class="label pull-right bg-red">3</small> <small
-								class="label pull-right bg-blue">17</small>
-						</span>
-					</a></li>
 					<li><a href="javascript:void(0)"
-						onclick="new PageLoader().loadDoctorPageList()"> <i
+						onclick="new Doctor().loadDoctorPageList()"> <i
 							class="fa fa-envelope"></i> <span>Doctor</span> <span
 							class="pull-right-container"> <small
 								class="label pull-right bg-yellow">12</small> <small
@@ -360,67 +347,7 @@
 								class="label pull-right bg-red">5</small>
 						</span>
 					</a></li>
-					<li class="treeview"><a href="#"> <i class="fa fa-folder"></i>
-							<span>Examples</span> <span class="pull-right-container">
-								<i class="fa fa-angle-left pull-right"></i>
-						</span>
-					</a>
-						<ul class="treeview-menu">
-							<li><a href="examples/invoice.html"><i
-									class="fa fa-circle-o"></i> Invoice</a></li>
-							<li><a href="examples/profile.html"><i
-									class="fa fa-circle-o"></i> Profile</a></li>
-							<li><a href="examples/login.html"><i
-									class="fa fa-circle-o"></i> Login</a></li>
-							<li><a href="examples/register.html"><i
-									class="fa fa-circle-o"></i> Register</a></li>
-							<li><a href="examples/lockscreen.html"><i
-									class="fa fa-circle-o"></i> Lockscreen</a></li>
-							<li><a href="examples/404.html"><i
-									class="fa fa-circle-o"></i> 404 Error</a></li>
-							<li><a href="examples/500.html"><i
-									class="fa fa-circle-o"></i> 500 Error</a></li>
-							<li><a href="examples/blank.html"><i
-									class="fa fa-circle-o"></i> Blank Page</a></li>
-							<li><a href="examples/pace.html"><i
-									class="fa fa-circle-o"></i> Pace Page</a></li>
-						</ul></li>
-					<li class="treeview"><a href="#"> <i class="fa fa-share"></i>
-							<span>Multilevel</span> <span class="pull-right-container">
-								<i class="fa fa-angle-left pull-right"></i>
-						</span>
-					</a>
-						<ul class="treeview-menu">
-							<li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
-							<li class="treeview"><a href="#"><i
-									class="fa fa-circle-o"></i> Level One <span
-									class="pull-right-container"> <i
-										class="fa fa-angle-left pull-right"></i>
-								</span> </a>
-								<ul class="treeview-menu">
-									<li><a href="#"><i class="fa fa-circle-o"></i> Level
-											Two</a></li>
-									<li class="treeview"><a href="#"><i
-											class="fa fa-circle-o"></i> Level Two <span
-											class="pull-right-container"> <i
-												class="fa fa-angle-left pull-right"></i>
-										</span> </a>
-										<ul class="treeview-menu">
-											<li><a href="#"><i class="fa fa-circle-o"></i> Level
-													Three</a></li>
-											<li><a href="#"><i class="fa fa-circle-o"></i> Level
-													Three</a></li>
-										</ul></li>
-								</ul></li>
-							<li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
-						</ul></li>
-					<li><a href="https://adminlte.io/docs"><i
-							class="fa fa-book"></i> <span>Documentation</span></a></li>
-					<li class="header">LABELS</li>
-					<li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
-					<li><a href="#"><i class="fa fa-circle-o text-yellow"></i>
-							<span>Warning</span></a></li>
-					<li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>
+
 				</ul>
 			</section>
 			<!-- /.sidebar -->
@@ -440,7 +367,7 @@
 			</section>
 
 			<!-- Main content -->
-			<section class="content">
+			<section class="content" id="content">
 				<div class="row">
 					<div class="col-md-3">
 						<div class="box box-solid">
@@ -733,6 +660,10 @@
 	<script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 	<!-- jQuery UI 1.11.4 -->
 	<script src="../bower_components/jquery-ui/jquery-ui.min.js"></script>
+
+	<script type="text/javascript" src="../js/knockout-3.2.0.js"></script>
+	<script type="text/javascript" src="../js/Swipe.js"></script>
+
 	<!-- Slimscroll -->
 	<script
 		src="../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
@@ -751,7 +682,12 @@
 		src="../bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
 	<script src="../js/utils/ServiceCalls.js"></script>
 	<script src="../js/utils/WsUtils.js"></script>
-	<script src="../js/PageLoader.js"></script>
+	<script src="../js/Doctor.js"></script>
+	<script src="../js/GridViewModel.js"></script>
+	<script src="../js/PageContents.js"></script>
+	<script src="../js/Appointment.js"></script>
+
+
 	<!-- Page specific script -->
 	<script>
   $(function () {
@@ -890,9 +826,9 @@
 	        }
 	    },
 	    events: function(start, end, timezone, callback) {
-	    	var res = loadSchedule();
-	    	console.log(res);
-	            var events = [];
+	    	new Appointment().loadAppointmentDetails(callback);
+	    	
+	           /*  var events = [];
 				$.each(res.returnList, function(i,v) {
 		     		var st = v[3].split("T");
 		     		var ed = v[3].split("T");
@@ -906,7 +842,7 @@
 			                borderColor    : '#0073b7' //Blue
 			              });
 		     	});
-	            callback(events);
+	            callback(events); */
 	      },
       
     })
@@ -954,29 +890,7 @@
 	  
   });
   
-  function loadSchedule(){
-	  return;
-		//alert("5");
-		var respons = "";
-		$.ajax({
-	        url: "http://localhost:8080//intelhosp/appointments",     
-	        
-	        type: "GET",
-	        async : false,
-	        success: function(data) {
-	     		respons=data;
-	        },
-	        error: function(xhr, textStatus, errorThrown)
-	        {
-	            alert(' loading error... ... ');
-	            respons = "error";
-	            
-	        }
-	    });
-		//alert("respons==> "+respons);
-		return respons;
-
-	}
+  
 </script>
 </body>
 </html>

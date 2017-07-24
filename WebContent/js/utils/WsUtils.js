@@ -536,6 +536,7 @@ var WsUtils = {
 	      	
 		    $("#"+dataGridTableId+"_next").bind("click",showNextPage);
 
-		}
+		},
+		
 		
 };
